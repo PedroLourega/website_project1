@@ -190,7 +190,7 @@ header .navbar {
         height: 100%;
         width:100%;
         backdrop-filter: blur(5px);
-        background-color: rgba(0, 0, 0,0.2);
+        background-color: rgba(0, 0,0,0.2);
     }
 
     .navbar :where(#menu-close-button, #menu-open-button){
