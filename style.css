@@ -371,6 +371,89 @@ header .navbar {
     font-size: var(--font-size-m);
 }
 
+/*Testimonials section styling*/
+.testimonials-section {
+    padding: 50px 0 100px;
+    background: var(--light-pink-color);
+}
+
+.testimonials-section .slider-wrapper{
+    overflow: hidden;
+    margin: 0 60px 50px;
+}
+
+.testimonials-section .testimonial{
+    display: flex;
+    padding: 35px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonials-section .testimonial .user-image{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 50px;
+    border-radius: var(--border-radius-circle);
+}
+
+.testimonials-section .testimonial .name{
+    margin-bottom: 16px;
+    font-size: var(--font-size-m);
+}
+
+.testimonials-section .testimonial .feedback{
+    line-height: 25px;
+}
+
+.testimonials-section .swiper-pagination-bullet{
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    background: var(--secondary-color);
+}
+
+.testimonials-section .swiper-slide-button {
+    margin-top: -50px;
+    color: var(--secondary-color);
+    transition: 0.3s ease;
+    }
+
+.testimonials-section .swiper-slide-button:hover{
+    color: var(--primary-color);
+}
+
+/* Gallery Section styling*/
+
+.gallery-section{
+    padding: 50px 100px ;
+}
+
+.gallery-section .gallery-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.gallery-section .gallery-list .gallery-item{
+    overflow: hidden;
+    border-radius: var(--border-radius-s);
+    width: calc(100% / 3 - 32px);
+}
+
+
+.gallery-section .gallery-item .gallery-image{
+    width: 100%;
+    height: 100%;
+    cursor: zoom-in;
+    transition: 0.3s ease;
+}
+
+.gallery-section .gallery-item:hover .gallery-image{
+    transform: scale(1.3);
+}
+
 /*Responsive media query code for max width 1024px*/
 @media screen and (max-width: 1024px){
     .menu-section .menu-list{
@@ -380,7 +463,6 @@ header .navbar {
         width: calc(100%/ 3 - 60px);
     }
 }
-
 
 /*Responsive media query code for max width 900px*/
 @media screen and (max-width: 900px){
@@ -487,13 +569,27 @@ header .navbar {
 .menu-section .menu-list .menu-item .menu-image{
     max-width: 200px;
 }
+
+.gallery-section .gallery-list .gallery-item{
+    width: calc(100% / 2 - 30px);
 }
 
+}
+/*Responsive media query code for max width 640px*/
 @media screen and (max-width: 640px){
     .menu-section .menu-list{
         gap: 60px;
     }
-    .menu-section .menu-list .menu-item{
+    .menu-section .menu-list .menu-item, .gallery-section .gallery-list .gallery-item{
         width: 100%;
+    }
+
+    .testmonials-section .slider-wrapper{
+        margin: 0 0 30px;
+    }
+
+    .testmonials-section .swiper-slide-button{
+        display: none;
+        
     }
 }
